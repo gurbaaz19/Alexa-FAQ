@@ -1,0 +1,69 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my ansh",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "QuestionIntent",
+                    "slots": [
+                        {
+                            "name": "parameter",
+                            "type": "CUSTOM_PARAMETERS"
+                        }
+                    ],
+                    "samples": [
+                        "{parameter}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "CUSTOM_PARAMETERS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Authentication of Mobile Number and e-mail Address",
+                                "synonyms": [
+                                    "phone",
+                                    "Email",
+                                    "email",
+                                    "e-mail",
+                                    "Mobile",
+                                    "Authentication"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Number of Sessions",
+                                "synonyms": [
+                                    "Sessions"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
