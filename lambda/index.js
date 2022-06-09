@@ -11,7 +11,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome to Ansh 2.0, you can ask me anything regarding JEE Main 2022';
+        const speakOutput = 'Welcome to FAQ Skill, Ask me anything related to JEE main 2022.';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -28,14 +28,15 @@ const QuestionIntentHandler = {
     },
     handle(handlerInput) {
         
-        let question = handlerInput.requestEnvelope.request.intent.parameter;
+        let question = handlerInput.requestEnvelope.request.intent.slots.parameter.value;
         let answer=null;
         
-        for(let item in data){
+        data.forEach((item)=>{
             if(item.keywords===question){
                 answer=item.answer;
             }
-        }
+        });
+       
         const speakOutput = answer;
 
         return handlerInput.responseBuilder
