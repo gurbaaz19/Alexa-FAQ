@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "my ansh",
+            "invocationName": "faq skill",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -24,6 +24,8 @@
                         }
                     ],
                     "samples": [
+                        "Authentication of Mobile Number and  {parameter} address",
+                        "tell me about the {parameter}",
                         "{parameter}"
                     ]
                 },
@@ -42,23 +44,47 @@
                     "values": [
                         {
                             "name": {
-                                "value": "Authentication of Mobile Number and e-mail Address",
-                                "synonyms": [
-                                    "phone",
-                                    "Email",
-                                    "email",
-                                    "e-mail",
-                                    "Mobile",
-                                    "Authentication"
-                                ]
+                                "value": "e-mail"
                             }
                         },
                         {
                             "name": {
-                                "value": "Number of Sessions",
-                                "synonyms": [
-                                    "Sessions"
-                                ]
+                                "value": "session"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "number of sessions"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "number"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sessions"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "email"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "authentication"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "phone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mobile"
                             }
                         }
                     ]

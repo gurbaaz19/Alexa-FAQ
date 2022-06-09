@@ -36,12 +36,20 @@ const QuestionIntentHandler = {
                 answer=item.answer;
             }
         });
+        
+        if(answer===null){
+            answer="Sorry, I can't answer that";
+        }
        
-        const speakOutput = answer;
+        const speakOutput = answer+"You can ask another question";
+        const repromptOutput = "You can ask another question";
+        const cardTitle = question;
+        const cardContent = answer;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt(repromptOutput)
+            .withSimpleCard(cardTitle, cardContent)
             .getResponse();
     }
 };
